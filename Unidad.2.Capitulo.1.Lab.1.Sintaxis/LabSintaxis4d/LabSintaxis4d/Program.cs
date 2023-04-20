@@ -12,7 +12,8 @@ namespace LabSintaxis4d
         {
             for (int i=0; i<=100; i++)
             {
-                Console.WriteLine(i);
+                i ++;
+                Console.WriteLine(i-1);
             }
             Console.ReadKey();
         }
