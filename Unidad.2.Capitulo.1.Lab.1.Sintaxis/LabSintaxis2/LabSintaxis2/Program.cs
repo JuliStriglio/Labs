@@ -16,27 +16,39 @@ namespace LabSintaxis2
             {
                 Console.WriteLine("No ingreso un tipo de dato string");
             }
-            else
+           else
             {
                 Console.WriteLine("Ingrese una opcion");
                 Console.WriteLine("1- Mostrar frase en mayuscula ");
                 Console.WriteLine("2- Mostrar frase en minuscula");
                 Console.WriteLine("3- Mostrar cantidad de caracteres");
 
-                ConsoleKeyInfo key = Console.ReadKey();
-                String opcion = Console.ReadLine();
 
-                int opc;
+                //ConsoleKeyInfo key = Console.ReadKey();
+               // String opcion = Console.ReadLine();
 
-                if (opcion == "1")
+                ConsoleKeyInfo opcion;
+                opcion = Console.ReadKey();
+
+                
+
+                if (opcion.Key == ConsoleKey.D1)
+               {
+                   
+                   
+                    Console.WriteLine(inputTexto.ToUpper());
+                    Console.ReadKey();
+                }
+                if (opcion.Key == ConsoleKey.D2)
                 {
-                    Console.WriteLine("Mayuscula");
+                   
+                    Console.WriteLine(inputTexto.ToLower());
+                    Console.ReadKey();
                 }
-                if (opcion == "2"){
-                    Console.WriteLine("minuscula");
-                }
-                if (opcion == "3"){
+                if (opcion.Key == ConsoleKey.D3){
+                    
                     Console.WriteLine(inputTexto.Length);
+                    Console.ReadKey();
                 }
             }
             
