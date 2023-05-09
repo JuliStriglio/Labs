@@ -23,6 +23,7 @@ namespace LabSintaxis4i
                 }
                 Console.WriteLine("\n");
             }
+          
             Console.ReadKey();
         }
     }
