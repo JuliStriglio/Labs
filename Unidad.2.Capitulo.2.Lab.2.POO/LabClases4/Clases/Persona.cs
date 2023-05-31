@@ -8,25 +8,23 @@ namespace Clases
 {
     public class Persona
     {
-        private string Nombre = ("Julieta");
-        private string Apellido = ("Striglio");
-        private int Edad = 22;
-        private int DNI = 43164308;
+        private string Nombre;
+        private string Apellido;
+        private int Edad;
+        private int DNI ;
 
 
-        public Persona(string nombre)
+        public Persona() //Constructor 
         {
-            this.Nombre = nombre;
+      
+           Console.WriteLine("Se creo un objeto");
         }
 
-        public Persona()
-        {
-        }
 
-        public void MostrarMensaje()
-        {
-            Console.WriteLine("Se creo un objeto ");
-        }
+        //public void MostrarMensaje()
+        //{
+           // Console.WriteLine("Se creo un objeto ");
+        //}
 
         public void GetFullName()
         {
@@ -38,7 +36,10 @@ namespace Clases
             Console.WriteLine("Su edad es :" + Edad);
         }
 
-
-
+        ~Persona()
+        {
+            Console.WriteLine("El objeto se destruyo");
+        }
+        
     }
 }

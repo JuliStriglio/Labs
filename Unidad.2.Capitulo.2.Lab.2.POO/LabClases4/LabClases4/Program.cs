@@ -11,8 +11,9 @@ namespace LabClases4
     {
         static void Main(string[] args)
         {
+       
             Persona per = new Persona();
-            per.MostrarMensaje();
+         
             per.GetFullName();
             per.GetAge();
 
