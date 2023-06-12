@@ -12,8 +12,8 @@ namespace Ej3LINQ
         class Ciudad
          {
 
-             public string Nombre;
-             public int CodP;
+             public string Nombre {get; set;} 
+             public int CodP{get; set;}
 
              public Ciudad(string nombre, int codP)
              {
@@ -26,24 +26,28 @@ namespace Ej3LINQ
 
             List<Ciudad> ciudades = new List<Ciudad>();
 
-            Ciudad ciu1 = new Ciudad ("Santa fe", 2173);
+            Ciudad ciu1 = new Ciudad("Santa fe", 2173);
             ciudades.Add(ciu1);
-             Ciudad ciu2 = new Ciudad ("Rosario", 2000);
+            Ciudad ciu2 = new Ciudad ("Rosario", 2000);
             ciudades.Add(ciu2);
-             Ciudad ciu3 = new Ciudad ("Cordoba", 5000);
+            Ciudad ciu3 = new Ciudad ("Cordoba", 5000);
             ciudades.Add(ciu3);
-           
+         
+        Console.WriteLine("Ingrese la expresion");
+            string expresion = Console.ReadLine();
+
+        expresion = expresion.ToLower();
 
             var c = from ci in ciudades
-                    where ci.Nombre.StartsWith("R")
-            select ci;
+                    where ci.Nombre.Contains(expresion)
+            select ci.CodP;
 
-            foreach()
+            foreach(var cods in c)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(cods);
             }
 
-
+            Console.ReadKey();
 
 
         }
